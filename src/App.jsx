@@ -18,7 +18,7 @@ function App() {
       <Navbar />
 
       {/* Sections */}
-      <section id="profile" className="py-10">
+      <section id="profile" className="py-4">
         <ProfileHeader />
       </section>
 
@@ -41,11 +41,6 @@ function App() {
       <section id="certificates" className="py-18">
         <Certificates />
       </section>
-
-      <section id="resume" className="py-10">
-        <EmbeddedResume />
-      </section>
-
     </div>
   )
 }
