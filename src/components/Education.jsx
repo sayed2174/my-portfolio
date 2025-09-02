@@ -57,18 +57,18 @@ export default function Education() {
   return (
     <motion.section
       id="education"
-      className="max-w-6xl mx-auto p-8"
+      className="w-full p-8 bg-gray-100 dark:bg-gray-900" // full width
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="bg-white dark:bg-gray-900 shadow-xl rounded-3xl p-8 md:p-12">
+      <div className="w-full p-8 md:p-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white">
-  Education
-</h2>
+            Education
+          </h2>
 
           <button
             onClick={() => setExpanded(!expanded)}
@@ -87,7 +87,7 @@ export default function Education() {
         </div>
 
         {/* Education Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {education.map((edu, idx) => (
             <a
               key={idx}
@@ -140,7 +140,7 @@ export default function Education() {
               <h3 className="text-2xl font-semibold text-center mb-6 text-gray-900 dark:text-white">
                 Semesters
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 text-center">
                 {education.map((edu, idx) => (
                   <div
                     key={idx}

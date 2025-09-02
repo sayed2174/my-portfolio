@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import pic from "../assets/my_pic.jpg";
 
 export default function ProfileHeader() {
   const [showInfo, setShowInfo] = useState(false);
@@ -15,14 +16,14 @@ export default function ProfileHeader() {
   return (
     <motion.section
       id="profile"
-      className="w-full min-h-screen bg-white dark:bg-gray-800 shadow-md py-16 px-6 flex flex-col items-center justify-center text-center"
+      className="w-full min-h-screen bg-gray-100 dark:bg-gray-900 py-16 px-6 flex flex-col items-center justify-center text-center"
       initial={{ opacity: 0, y: -60 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
       {/* Profile Image */}
       <motion.img
-        src="src/assets/my_pic.jpg" // replace with your photo
+        src={pic}
         alt="Profile"
         className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-full border-4 border-blue-500 shadow-lg mb-8"
         whileHover={{ scale: 1.05 }}
@@ -110,14 +111,13 @@ export default function ProfileHeader() {
       {/* Info Paragraph */}
       {showInfo && (
         <motion.p
-          className="mt-8 max-w-3xl text-gray-700 dark:text-gray-300 text-lg leading-relaxed"
+          className="mt-8 w-full max-w-4xl px-4 text-gray-700 dark:text-gray-300 text-lg leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="font-bold mt-8 text-lg">
-            <Typewriter
-              words={[
+          <Typewriter
+            words={[
               `Motivated and detail-oriented Computer Science and AIML student with strong foundations in full stack web development, machine learning, and cybersecurity. Completed multiple virtual internships from industry leaders like AWS, Palo Alto Networks, and Deloitte. Skilled in solving real-world problems through technical and analytical thinking. A fast learner and effective team player with hands-on experience in personal projects and volunteering activities.`
             ]}
             cursor
@@ -125,8 +125,7 @@ export default function ProfileHeader() {
             typeSpeed={40}
             deleteSpeed={0}
             delaySpeed={1500}
-            />
-          </p>
+          />
         </motion.p>
       )}
     </motion.section>

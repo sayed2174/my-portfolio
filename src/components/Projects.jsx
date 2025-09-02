@@ -2,15 +2,27 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Live Wallpaper & Image Wallpaper Android Apps",
-    description: "Android apps for dynamic and static wallpapers.",
+    title: "Heart Disease Prediction System",
+    description: "Heart Disease Prediction System is an Machine Learning model using various supervised algorithms to predict whether a patient has disease or not by using clinical parameters. UI is website based using django framework",
+    tech: ["Machine Learning", "Python", "Django", "Pretrain models", "Unit Testing using pyunit", "scikit-learn", "Pandas", "supervised algorithm"],
+    link: "https://github.com/yourprofile/live-wallpaper-app",
+  },
+  {
+    title: "Live Wallpaper Android Apps",
+    description: "Android apps for images as dynamic and static wallpapers. It has the time interval featur for choosing the needed and wanted time interval to change of selecting images automatically, and features like selecting and removing images from and to app",
+    tech: ["Android Studio", "Java"],
+    link: "https://github.com/yourprofile/live-wallpaper-app",
+  },
+  {
+    title: "Video Wallpaper Android Apps",
+    description: "Android apps for video as dynamic and static wallpapers. It has features like add and remove the videos from app and time interval for changing the video to video automatically.",
     tech: ["Android Studio", "Java"],
     link: "https://github.com/yourprofile/live-wallpaper-app",
   },
   {
     title: "YouTube Comments Extractor",
-    description: "Tool to extract & analyze YouTube comments.",
-    tech: ["Python", "YouTube API", "pandas"],
+    description: "Tool to extract & analyze YouTube comments. It is the idea of data extraction that extract mining the comments[data] with the help of python and youtube api, so that ethically youtube comments can be extracted and stored as json and excel",
+    tech: ["Python", "YouTube API", "pandas", "Numpy"],
     link: "https://github.com/yourprofile/youtube-comments-extractor",
   },
   {
@@ -21,14 +33,26 @@ const projects = [
   },
   {
     title: "Google Form Data Extractor",
-    description: "Automates extracting Google Form responses.",
-    tech: ["Python", "Automation"],
+    description: " it is an ideas of filling the g form and stor that form data in google sheet and that sheet data can be used as web data in sites or pages using js or react framwork",
+    tech: ["Python", "Automation", "AppScript", "CSS", "HTML" ],
     link: "https://github.com/yourprofile/google-form-extractor",
   },
   {
-    title: "Loan Approval & Churn Models",
-    description: "ML models for loan approval & customer churn.",
-    tech: ["Python", "scikit-learn", "pandas"],
+    title: "Loan Approval Prediction Models",
+    description: "ML models for loan approval of customer or not approval.",
+    tech: ["Python", "scikit-learn", "pandas", "Random Forest Model"],
+    link: "https://github.com/yourprofile/loan-churn-models",
+  },
+  {
+    title: "Customer Churn Prediction Models",
+    description: "ML models for predicting whether a customer end his service or not based on some parameters such as issues, services and others",
+    tech: ["Python", "scikit-learn", "pandas", "KNN", "Random Forest Model"],
+    link: "https://github.com/yourprofile/loan-churn-models",
+  },
+  {
+    title: "Body Fitness dietary app",
+    description: "This app is for calculating BMI, BMR, BFI for making and deciding diet based on rate and measurement of app results",
+    tech: ["android", "HTML", "CSS", "android studio"],
     link: "https://github.com/yourprofile/loan-churn-models",
   },
 ];
@@ -45,13 +69,13 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="max-w-6xl mx-auto p-8"
+      className="w-full p-8 bg-gray-100 dark:bg-gray-900"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="bg-white dark:bg-gray-900 shadow-xl rounded-3xl p-8 md:p-12">
+      <div className="w-full p-8 md:p-12">
         <h2 className="text-3xl font-bold mb-10 text-center text-gray-900 dark:text-white">
           Projects
         </h2>

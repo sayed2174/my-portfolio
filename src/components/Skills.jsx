@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const skills = [
   "HTML", "CSS", "JavaScript", "Python", "Java", "C",
   "NodeJS", "Django", "ExpressJS", "AngularJS",
-  "SQL", "NoSQL", "Machine Learning (scikit-learn, pandas, numpy, matplotlib)",
+  "SQL", "NoSQL", "Machine Learning","scikit-learn", "pandas", "numpy", "matplotlib",
   "Networking", "IoT", "Tableau", "VS Code", "Eclipse", "Android Studio"
 ];
 
@@ -11,15 +11,15 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="max-w-6xl mx-auto p-8"
+      className="w-full p-8 bg-gray-100 dark:bg-gray-900" // full width background
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 md:p-12">
-        <h2 className="text-2xl font-bold mb-6">Skills</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <div className="w-full p-8 md:p-12">
+        <h2 className="text-2xl font-bold mb-6 text-center">Skills</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={index}

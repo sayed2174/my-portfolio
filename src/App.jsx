@@ -9,7 +9,7 @@ import Education from './components/Education';
 import Internships from './components/Internships';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
-
+import EmbeddedResume from './components/ResumePage';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -18,29 +18,34 @@ function App() {
       <Navbar />
 
       {/* Sections */}
-      <section id="profile" className="pt-24">
+      <section id="profile" className="py-10">
         <ProfileHeader />
       </section>
 
-      <section id="skills" className="h-screen flex items-center justify-center">
+      <section id="skills" className="py-4">
         <Skills />
       </section>
 
-      <section id="education" className="h-screen flex items-center justify-center">
+      <section id="education" className="py-4">
         <Education />
       </section>
 
-      <section id="internships" className="h-screen flex items-center justify-center">
+      <section id="internships" className="py-4">
         <Internships />
       </section>
 
-      <section id="projects" className="h-screen flex items-center justify-center">
+      <section id="projects" className="py-4">
         <Projects />
       </section>
 
-      <section id="certificates" className="h-screen flex items-center justify-center">
+      <section id="certificates" className="py-18">
         <Certificates />
       </section>
+
+      <section id="resume" className="py-10">
+        <EmbeddedResume />
+      </section>
+
     </div>
   )
 }

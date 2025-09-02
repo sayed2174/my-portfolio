@@ -3,53 +3,49 @@ import { FaBriefcase, FaCalendarAlt, FaBuilding } from "react-icons/fa";
 
 const experiences = [
   {
-    role: "Web Development Intern",
-    company: "ABC Tech Solutions",
-    duration: "June 2023 - Aug 2023",
-    description:
-      "Built responsive web apps using React and TailwindCSS, optimized performance by 20%.",
-    certificate: "https://drive.google.com/file/d/EXAMPLE_ID1/view?usp=sharing",
+    "role": "Web Development Intern",
+    "company": "TECH OCTANET SERVICES PVT LTD.",
+    "duration": "1st June 2024 - 1st July 2024",
+    "description": "Demonstrated exceptional dedication, enthusiasm, and a strong willingness to learn, actively engaging in various projects and tasks while exhibiting remarkable skills and a high level of professionalism.",
+    "certificate": "https://drive.google.com/file/d/1kUqplqWyTSiG0ChUutqOUn4PZofVB1gq/view?usp=drive_link"
   },
   {
-    role: "Machine Learning Intern",
-    company: "XYZ AI Labs",
-    duration: "Jan 2024 - Mar 2024",
-    description:
-      "Developed ML models for text classification, integrated with Flask pipeline.",
-    certificate: "https://drive.google.com/file/d/EXAMPLE_ID2/view?usp=sharing",
+    "role": "Software Developer Intern",
+    "company": "MARGEY LABS PVT LIMITED",
+    "duration": "Jan 02 - 2025 to Apr 02 - 2025",
+    "description": "Worked on the front end using React and enhanced the UI components of the Byteslash website.",
+    "certificate": "https://drive.google.com/file/d/1scxb_inYjyeMCn_asJeIDmfKSI-APVAu/view?usp=drive_link"
   },
   {
-    role: "Open Source Contributor",
-    company: "GitHub Projects",
-    duration: "2022 - Present",
-    description:
-      "Contributed to automation projects, improved docs, and fixed bugs.",
-    certificate: "https://drive.google.com/file/d/EXAMPLE_ID3/view?usp=sharing",
+    "role": "Backend Development Intern",
+    "company": "CODTECH IT SOLUTIONS",
+    "duration": "1st JUNE 2024 to 13th JULY 2024",
+    "description": "Actively participated in the Backend Development Internship Program with unwavering dedication.",
+    "certificate": "https://drive.google.com/file/d/1TNUtM1K-2XVAIve93iip2vBLF6hQSs6j/view?usp=drive_link"
   },
   {
-    role: "Open Source Contributor",
-    company: "GitHub Projects",
-    duration: "2022 - Present",
-    description:
-      "Contributed to automation projects, improved docs, and fixed bugs.",
-    certificate: "https://drive.google.com/file/d/EXAMPLE_ID3/view?usp=sharing",
+    "role": "AI-ML Development Intern",
+    "company": "Next24tech Technology & Services",
+    "duration": "July 20, 2024 to September 20, 2024",
+    "description": "Completed a 2-month internship program in AI-ML Development, demonstrating significant efforts and achievements.",
+    "certificate": "https://drive.google.com/file/d/1FHFj8e_4nOBWVzr1cyD7pjVej2uuQeI-/view?usp=drive_link"
   },
   {
-    role: "Web Development Intern",
-    company: "ABC Tech Solutions",
-    duration: "June 2023 - Aug 2023",
-    description:
-      "Built responsive web apps using React and TailwindCSS, optimized performance by 20%.",
-    certificate: "https://drive.google.com/file/d/EXAMPLE_ID1/view?usp=sharing",
+    "role": "Data Engineering Virtual Intern",
+    "company": "EduSkills (supported by AWS academy and AICTE)",
+    "duration": "April - June 2024 (10 weeks)",
+    "description": "Successfully completed a 10-week virtual internship in Data Engineering.",
+    "certificate": "https://drive.google.com/file/d/1oMIjyhta_ey4qOhgWXBXdKvQJkoIcg1K/view?usp=drive_link"
+
   },
   {
-    role: "Machine Learning Intern",
-    company: "XYZ AI Labs",
-    duration: "Jan 2024 - Mar 2024",
-    description:
-      "Developed ML models for text classification, integrated with Flask pipeline.",
-    certificate: "https://drive.google.com/file/d/EXAMPLE_ID2/view?usp=sharing",
-  },
+    "role": "AI-ML Virtual Intern",
+    "company": "EduSkills (supported by AWS academy and AICTE)",
+    "duration": "January - March 2024 (10 weeks)",
+    "description": "Successfully completed a 10-week virtual internship in AI-ML.",
+    "certificate": "https://drive.google.com/file/d/1shbgNHyILJOdM8-H8TDS9XUNxB0DAoeY/view?usp=drive_link"
+
+  }
 ];
 
 export default function Experience() {
@@ -60,24 +56,23 @@ export default function Experience() {
     "from-yellow-100 to-yellow-200 dark:from-yellow-800 dark:to-yellow-900",
     "from-indigo-100 to-indigo-200 dark:from-indigo-800 dark:to-indigo-900",
     "from-pink-100 to-pink-200 dark:from-pink-800 dark:to-pink-900",
-    
   ];
 
   return (
     <motion.section
       id="experience"
-      className="max-w-6xl mx-auto p-8"
+      className="w-full p-8 bg-gray-100 dark:bg-gray-900" // full width
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 md:p-12">
+      <div className="w-full p-8 md:p-12">
         <h2 className="text-2xl font-bold mb-8 text-center">
           Internships & Experience
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiences.map((exp, idx) => (
             <motion.div
               key={idx}

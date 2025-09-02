@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 
-const sections = ["profile", "skills", "education", "internships", "projects", "certificates"];
+const sections = ["profile", "skills", "education", "internships", "projects", "certificates", "resume"];
 
 export default function Navbar() {
   const [active, setActive] = useState("profile");
@@ -35,7 +35,7 @@ export default function Navbar() {
               href={`#${id}`}
               className={`relative px-3 py-1 rounded-md transition-all duration-300 font-medium ${
                 active === id
-                  ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold shadow-lg scale-105 text-shadow-md"
+                  ? ""
                   : "text-gray-800 dark:text-gray-300 hover:text-white hover:scale-105 hover:bg-gradient-to-r hover:from-blue-400 hover:to-indigo-400"
               }`}
             >
@@ -47,10 +47,10 @@ export default function Navbar() {
           </li>
         ))}
 
-        {/* Theme Toggle Button */}
+        {/* Theme Toggle Button
         <li className="ml-6">
           <ThemeToggle />
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
