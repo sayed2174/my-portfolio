@@ -22,7 +22,7 @@ export default function ProfileHeader() {
     >
       {/* Profile Image */}
       <motion.img
-        src="https://drive.google.com/file/d/1cz4zdSCj8lJUsBN4icWkhY5pv6N9KMHJ/view?usp=drive_link"
+        src="https://drive.google.com/uc?export=view&id=1cz4zdSCj8lJUsBN4icWkhY5pv6N9KMHJ"
         alt="Profile"
         className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-full border-4 border-blue-500 shadow-lg mb-8"
         whileHover={{ scale: 1.05 }}
