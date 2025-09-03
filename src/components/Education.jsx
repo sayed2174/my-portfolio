@@ -6,44 +6,7 @@ import {
   FaCalendarAlt,
   FaChevronDown,
 } from "react-icons/fa";
-
-const education = [
-  {
-    degree: "Bachelor of Technology (CSE - AI & ML)",
-    school: "G. Pulla Reddy Engineering College",
-    year: "2021 - 2025",
-    score: "CGPA: 8.59",
-    link: "https://www.gprec.ac.in",
-    semesters: {
-      "Year 1": ["Sem 1", "Sem 2"],
-      "Year 2": ["Sem 3", "Sem 4"],
-      "Year 3": ["Sem 5", "Sem 6"],
-      "Year 4": ["Sem 7", "Sem 8"],
-    },
-  },
-  {
-    degree: "Diploma in Computer Engineering",
-    school: "Government Polytechnic College",
-    year: "2019 - 2022",
-    score: "Percentage: 81%",
-    link: "https://govtpolyproddatur.ac.in/",
-    semesters: {
-      "Year 1": ["Sem 1", "Sem 2"],
-      "Year 2": ["Sem 3", "Sem 4"],
-      "Year 3": ["Sem 5", "Sem 6"],
-    },
-  },
-  {
-    degree: "SSC (10th)",
-    school: "Government High School",
-    year: "2019",
-    score: "GPA: 9.0",
-    link: "https://bse.ap.gov.in",
-    semesters: {
-      "Final Year": ["10th"],
-    },
-  },
-];
+import education from "../assets/Data/eduData";
 
 export default function Education() {
   const [expanded, setExpanded] = useState(true);

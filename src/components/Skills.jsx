@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-
-const skills = [
-  "HTML", "CSS", "JavaScript", "Python", "Java", "C",
-  "NodeJS", "Django", "ExpressJS", "AngularJS",
-  "SQL", "NoSQL", "Machine Learning","scikit-learn", "pandas", "numpy", "matplotlib",
-  "Networking", "IoT", "Tableau", "VS Code", "Eclipse", "Android Studio"
-];
+import skills from "../assets/Data/skillsData";
 
 export default function Skills() {
   return (
