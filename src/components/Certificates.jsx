@@ -1,7 +1,22 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import certificates from "../assets/Data/certData";
+// import certificates from "./cert.json";
 
 export default function Certificates() {
+  const [certificates, setCertificates] = useState([]);
+  useEffect(() => {
+    // Replace with your actual Apps Script or API link
+    const url = "https://sayed2174.github.io/portfolio-data/cert.json";
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched data:", data); // Debugging
+        setCertificates(data);
+      })
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
+
   return (
     <motion.section
       id="certificates"

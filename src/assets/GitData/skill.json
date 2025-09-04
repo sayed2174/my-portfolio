@@ -1,4 +1,4 @@
-const skills = [
+[
   "HTML",
   "CSS",
   "JavaScript",
@@ -26,5 +26,4 @@ const skills = [
   "Tailwind",
   "Git",
   "SpringBoot"
-];
-export default skills;
+]

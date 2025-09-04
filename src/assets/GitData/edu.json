@@ -1,4 +1,4 @@
-const education = [
+[
   {
     "degree": "Bachelor of Technology (CSE - AI & ML)",
     "school": "G. Pulla Reddy Engineering College",
@@ -34,5 +34,4 @@ const education = [
       "Final Year": ["10th"]
     }
   }
-];
-export default education
+]

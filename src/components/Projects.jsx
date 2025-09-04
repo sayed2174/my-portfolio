@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import projects from "../assets/Data/projectData";
+import { useEffect, useState } from "react";
+// import projects from "../assets/Data/projectData";
 // const projects = [
 //   {
 //     title: "Android app debloater windows application",
@@ -71,7 +72,21 @@ export default function Projects() {
     "from-indigo-400 via-indigo-300 to-indigo-200 dark:from-indigo-800 dark:via-indigo-700 dark:to-indigo-600",
     "from-purple-400 via-purple-300 to-purple-200 dark:from-purple-800 dark:via-purple-700 dark:to-purple-600",
   ];
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    // Replace with your actual Apps Script or API link
+    const url = "https://sayed2174.github.io/portfolio-data/project.json";
 
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched data:", data); // Debugging
+        setProjects(data);
+      })
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
+
+  
   return (
     <motion.section
       id="projects"

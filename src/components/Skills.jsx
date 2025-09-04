@@ -1,7 +1,22 @@
 import { motion } from "framer-motion";
-import skills from "../assets/Data/skillsData";
+import { useEffect, useState } from "react";
+// import skills from "../assets/Data/skillsData";
 
 export default function Skills() {
+  const [skills, setSkills] = useState([]);
+    useEffect(() => {
+      // Replace with your actual Apps Script or API link
+      const url = "https://sayed2174.github.io/portfolio-data/skill.json";
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Fetched data:", data); // Debugging
+          setSkills(data);
+        })
+        .catch((err) => console.error("Fetch error:", err));
+    }, []);
+
   return (
     <motion.section
       id="skills"

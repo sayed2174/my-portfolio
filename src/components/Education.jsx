@@ -1,4 +1,4 @@
-import { useState } from "react"; 
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaGraduationCap,
@@ -6,10 +6,23 @@ import {
   FaCalendarAlt,
   FaChevronDown,
 } from "react-icons/fa";
-import education from "../assets/Data/eduData";
+// import education from "../assets/Data/eduData";
 
 export default function Education() {
   const [expanded, setExpanded] = useState(true);
+  const [education, setEducation] = useState([]);
+    useEffect(() => {
+      // Replace with your actual Apps Script or API link
+      const url = "https://sayed2174.github.io/portfolio-data/edu.json";
+  
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Fetched data:", data); // Debugging
+          setEducation(data);
+        })
+        .catch((err) => console.error("Fetch error:", err));
+    }, []);
 
   const gradients = [
     "from-blue-400 via-blue-300 to-blue-200 dark:from-blue-800 dark:via-blue-700 dark:to-blue-600",

@@ -1,4 +1,4 @@
-const projects = [
+[
   {
     "title": "Android app debloater windows application",
     "description": "its an windows application which comes with .exe and used for uninstalling or debloating the android applications from windows operating system",
@@ -118,5 +118,4 @@ const projects = [
     ],
     "link": "https://github.com/sayed2174/Body-Health-Diet-Calculator"
   }
-];
-export default projects;
+]

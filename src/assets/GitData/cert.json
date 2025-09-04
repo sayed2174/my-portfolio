@@ -1,4 +1,4 @@
-const certificates = [
+[
     { "name": "Associate in IT Foundation Java – Infosys Springboard", "link": "https://drive.google.com/file/d/1GgDrToJK55AFSlQDwa_UiHoI7DfjVszR/view?usp=drive_link" },
     { "name": "Git – Infosys Springboard", "link": "https://drive.google.com/file/d/1az1e9mmO2lYJNZwEpk3H3XR7Af2qTds2/view?usp=drive_link" },
     { "name": "Drone Technology – IIIT DM Kurnool", "link": "https://drive.google.com/file/d/13o-8k__G5wylWLKA9koUjV3odMrq1Te4/view?usp=drive_link" },
@@ -29,6 +29,4 @@ const certificates = [
     { "name": "DSA Workshop – Coding Ninjas", "link": "https://drive.google.com/file/d/1u99EHvKGeBrvyOuBenYjZoFfAROIL_YK/view?usp=drive_link" },
     { "name": "Volunteer Appreciation – G Pulla Reddy Engineering College", "link": "https://drive.google.com/file/d/1_amKNE2g8u98q4xpxSCBRRfRv2bfUGb4/view?usp=drive_link" },
     { "name": "Tech Event Participation – G Pulla Reddy Engineering College", "link": "https://drive.google.com/file/d/15FWipx_w80FyIFLmQqMhxG_lY6slIKM2/view?usp=drive_link" }
-];
-
-export default certificates;
+]

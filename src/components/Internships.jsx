@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaCalendarAlt, FaBuilding } from "react-icons/fa";
-import experiences from "../assets/Data/internData";
+import { useEffect, useState } from "react";
+// import experiences from "../assets/Data/internData";
 
 export default function Experience() {
   const gradients = [
@@ -11,6 +12,19 @@ export default function Experience() {
     "from-indigo-100 to-indigo-200 dark:from-indigo-800 dark:to-indigo-900",
     "from-pink-100 to-pink-200 dark:from-pink-800 dark:to-pink-900",
   ];
+  const [experiences, setExperiences] = useState([]);
+  useEffect(() => {
+    // Replace with your actual Apps Script or API link
+    const url = "https://sayed2174.github.io/portfolio-data/intern.json";
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched data:", data); // Debugging
+        setExperiences(data);
+      })
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
 
   return (
     <motion.section
